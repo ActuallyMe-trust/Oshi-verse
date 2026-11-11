@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/holomem.css" />
+    <link rel="stylesheet" href="./css/discography.css" />
   </head>
 
   <body>
     <main class="oshiverse">
-      <!--Landing-->
+      <!-- Landing -->
+
       <section class="landing" id="landing">
         <div class="landing__background">
           <div class="landing__placeholder">LANDING IMAGE</div>
@@ -39,16 +41,13 @@
         </div>
       </section>
 
-      <!-- ╔══════════════════════════════════════════════════════════════════════╗ -->
-      <!-- ╚══════════════════════════════════════════════════════════════════════╝ -->
+      <!-- Holomem 001 -->
 
-      <!--holomem1-->
       <section
         class="holomem holomem--01"
         id="holomem-01"
         data-member-number="001"
       >
-        <!-- Background -->
         <div class="holomem__background">
           <div class="holomem__background-placeholder">HOLOMEM BACKGROUND</div>
         </div>
@@ -56,6 +55,7 @@
         <div class="holomem__ambient-glow"></div>
 
         <!-- Header -->
+
         <header class="holomem__header">
           <div class="holomem__branding">
             <span class="holomem__brand-name">OSHIVERSE</span>
@@ -71,13 +71,17 @@
         </header>
 
         <!-- Horizontal Slides -->
+
         <div class="holomem__slides">
-          <!-- Slide 01 -->
+          <!-- Slide 01: Introduction -->
+
           <article
             class="holomem__slide is-active"
             data-title="INTRODUCTION"
             data-category="CHARACTER PRESENTATION"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">GENERATION / UNIT</p>
@@ -120,18 +124,21 @@
             <div class="holomem__character">
               <img
                 class="holomem__character-image"
-                src="./assets/img/pose-01.png"
+                src="./src/cc_icon.png"
                 alt="Character introduction pose"
               />
             </div>
           </article>
 
-          <!-- Slide 02 -->
+          <!-- Slide 02: Personality -->
+
           <article
             class="holomem__slide"
             data-title="PERSONALITY"
             data-category="BEHIND THE CHARACTER"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">A CLOSER LOOK</p>
@@ -180,12 +187,20 @@
             </div>
           </article>
 
-          <!-- Slide 03 -->
+          <!-- Slide 03: Lore and Discography -->
+
           <article
-            class="holomem__slide"
+            class="holomem__slide holomem__slide--discography"
             data-title="LORE & IDENTITY"
             data-category="CHARACTER BACKGROUND"
+            style="
+              --slide-background: url(&quot;./assets/img/member-01/slides/slide-03.jpg&quot;);
+            "
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
+            <!-- Left Column: Lore -->
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">THE STORY</p>
@@ -224,22 +239,225 @@
               </div>
             </div>
 
-            <div class="holomem__character">
-              <img
-                class="holomem__character-image"
-                src="./assets/img/pose-03.png"
-                alt="Character lore pose"
-                loading="lazy"
-              />
-            </div>
+            <!-- Right Column: Continuous Discography -->
+
+            <section
+              class="discography"
+              data-discography
+              data-speed="12"
+              aria-label="Music discography"
+            >
+              <div class="discography__header">
+                <div class="discography__heading">
+                  <span class="discography__eyebrow">HER MUSIC</span>
+                  <h3 class="discography__title">DISCOGRAPHY</h3>
+                </div>
+              </div>
+
+              <div
+                class="discography__viewport"
+                data-discography-viewport
+                aria-label="Continuously scrolling albums"
+              >
+                <div class="discography__track" data-discography-track>
+                  <!-- Original Album Group -->
+
+                  <div class="discography__group">
+                    <!-- Album 01 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-01.jpg"
+                          alt="Album cover 01"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          SOLO RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">OSHI NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Album 02 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-02.jpg"
+                          alt="Album cover 02"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          COLLABORATION
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">
+                          ARTIST / GROUP
+                        </span>
+                      </div>
+                    </article>
+
+                    <!-- Album 03 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-03.jpg"
+                          alt="Album cover 03"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          GROUP RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">GROUP NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Archive Loop Separator -->
+
+                    <div class="discography__separator" aria-hidden="true">
+                      <span class="discography__separator-label">
+                        MUSICAL ARCHIVE
+                      </span>
+
+                      <span class="discography__separator-title">
+                        THE MUSIC NEVER ENDS.
+                      </span>
+
+                      <span class="discography__separator-subtitle">
+                        ANOTHER MEMORY BEGINS.
+                      </span>
+
+                      <span class="discography__separator-line"></span>
+
+                      <span class="discography__separator-caption">
+                        RETURNING TO THE BEGINNING OF THE ARCHIVE
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Duplicated Album Group: Seamless Loop -->
+
+                  <div class="discography__group" aria-hidden="true">
+                    <!-- Album 01 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-01.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          SOLO RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">OSHI NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Album 02 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-02.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          COLLABORATION
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">
+                          ARTIST / GROUP
+                        </span>
+                      </div>
+                    </article>
+
+                    <!-- Album 03 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-01/albums/album-03.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          GROUP RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">GROUP NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Archive Loop Separator Duplicate -->
+
+                    <div class="discography__separator" aria-hidden="true">
+                      <span class="discography__separator-label">
+                        MUSICAL ARCHIVE
+                      </span>
+
+                      <span class="discography__separator-title">
+                        THE MUSIC NEVER ENDS.
+                      </span>
+
+                      <span class="discography__separator-subtitle">
+                        ANOTHER MEMORY BEGINS.
+                      </span>
+
+                      <span class="discography__separator-line"></span>
+
+                      <span class="discography__separator-caption">
+                        RETURNING TO THE BEGINNING OF THE ARCHIVE
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="discography__footer">
+                <span class="discography__counter">
+                  <span data-discography-total>03</span>
+                  <span>RELEASES</span>
+                </span>
+
+                <span class="discography__footer-label"> MUSICAL ARCHIVE </span>
+              </div>
+            </section>
           </article>
 
-          <!-- Slide 04 -->
+          <!-- Slide 04: Favorites -->
+
           <article
             class="holomem__slide"
             data-title="FAVORITES"
             data-category="PERSONAL INTERESTS"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">THE LITTLE THINGS</p>
@@ -288,12 +506,15 @@
             </div>
           </article>
 
-          <!-- Slide 05 -->
+          <!-- Slide 05: Personal Message -->
+
           <article
             class="holomem__slide"
             data-title="PERSONAL MESSAGE"
             data-category="A NOTE FROM THE ARCHIVE"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">ONE LAST THING</p>
@@ -316,7 +537,7 @@
 
               <div class="holomem__signature">
                 <span class="holomem__signature-line"></span>
-                <span class="holomem__signature-name">WITH ADMIRATION</span>
+                <span class="holomem__signature-name"> WITH ADMIRATION </span>
               </div>
             </div>
 
@@ -332,6 +553,7 @@
         </div>
 
         <!-- Footer -->
+
         <footer class="holomem__footer">
           <div class="holomem__slide-info">
             <span class="holomem__slide-category">
@@ -357,9 +579,9 @@
               </button>
 
               <div class="holomem__pagination-indicator">
-                <span class="holomem__pagination-current" aria-live="polite"
-                  >01</span
-                >
+                <span class="holomem__pagination-current" aria-live="polite">
+                  01
+                </span>
 
                 <span class="holomem__pagination-divider">/</span>
 
@@ -384,16 +606,13 @@
         </footer>
       </section>
 
-      <!-- ╔══════════════════════════════════════════════════════════════════════╗ -->
-      <!-- ╚══════════════════════════════════════════════════════════════════════╝ -->
+      <!-- Holomem 002 -->
 
-      <!--holomem1-->
       <section
-        class="holomem holomem--01"
-        id="holomem-01"
-        data-member-number="001"
+        class="holomem holomem--02"
+        id="holomem-02"
+        data-member-number="002"
       >
-        <!-- Background -->
         <div class="holomem__background">
           <div class="holomem__background-placeholder">HOLOMEM BACKGROUND</div>
         </div>
@@ -401,6 +620,7 @@
         <div class="holomem__ambient-glow"></div>
 
         <!-- Header -->
+
         <header class="holomem__header">
           <div class="holomem__branding">
             <span class="holomem__brand-name">OSHIVERSE</span>
@@ -409,20 +629,24 @@
           </div>
 
           <div class="holomem__header-info">
-            <span class="holomem__member-number">NO. 001</span>
+            <span class="holomem__member-number">NO. 002</span>
             <span class="holomem__header-divider"></span>
             <span class="holomem__organization">HOLOLIVE ENGLISH</span>
           </div>
         </header>
 
         <!-- Horizontal Slides -->
+
         <div class="holomem__slides">
-          <!-- Slide 01 -->
+          <!-- Slide 01: Introduction -->
+
           <article
             class="holomem__slide is-active"
             data-title="INTRODUCTION"
             data-category="CHARACTER PRESENTATION"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">GENERATION / UNIT</p>
@@ -471,12 +695,15 @@
             </div>
           </article>
 
-          <!-- Slide 02 -->
+          <!-- Slide 02: Personality -->
+
           <article
             class="holomem__slide"
             data-title="PERSONALITY"
             data-category="BEHIND THE CHARACTER"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">A CLOSER LOOK</p>
@@ -525,12 +752,20 @@
             </div>
           </article>
 
-          <!-- Slide 03 -->
+          <!-- Slide 03: Lore and Discography -->
+
           <article
-            class="holomem__slide"
+            class="holomem__slide holomem__slide--discography"
             data-title="LORE & IDENTITY"
             data-category="CHARACTER BACKGROUND"
+            style="
+              --slide-background: url(&quot;./assets/img/member-02/slides/slide-03.jpg&quot;);
+            "
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
+            <!-- Left Column: Lore -->
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">THE STORY</p>
@@ -569,22 +804,225 @@
               </div>
             </div>
 
-            <div class="holomem__character">
-              <img
-                class="holomem__character-image"
-                src="./assets/img/pose-03.png"
-                alt="Character lore pose"
-                loading="lazy"
-              />
-            </div>
+            <!-- Right Column: Continuous Discography -->
+
+            <section
+              class="discography"
+              data-discography
+              data-speed="12"
+              aria-label="Music discography"
+            >
+              <div class="discography__header">
+                <div class="discography__heading">
+                  <span class="discography__eyebrow">HER MUSIC</span>
+                  <h3 class="discography__title">DISCOGRAPHY</h3>
+                </div>
+              </div>
+
+              <div
+                class="discography__viewport"
+                data-discography-viewport
+                aria-label="Continuously scrolling albums"
+              >
+                <div class="discography__track" data-discography-track>
+                  <!-- Original Album Group -->
+
+                  <div class="discography__group">
+                    <!-- Album 01 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-01.jpg"
+                          alt="Album cover 01"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          SOLO RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">OSHI NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Album 02 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-02.jpg"
+                          alt="Album cover 02"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          COLLABORATION
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">
+                          ARTIST / GROUP
+                        </span>
+                      </div>
+                    </article>
+
+                    <!-- Album 03 -->
+
+                    <article class="discography__item" data-album>
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-03.jpg"
+                          alt="Album cover 03"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          GROUP RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">GROUP NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Archive Loop Separator -->
+
+                    <div class="discography__separator" aria-hidden="true">
+                      <span class="discography__separator-label">
+                        MUSICAL ARCHIVE
+                      </span>
+
+                      <span class="discography__separator-title">
+                        THE MUSIC NEVER ENDS.
+                      </span>
+
+                      <span class="discography__separator-subtitle">
+                        ANOTHER MEMORY BEGINS.
+                      </span>
+
+                      <span class="discography__separator-line"></span>
+
+                      <span class="discography__separator-caption">
+                        RETURNING TO THE BEGINNING OF THE ARCHIVE
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Duplicated Album Group: Seamless Loop -->
+
+                  <div class="discography__group" aria-hidden="true">
+                    <!-- Album 01 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-01.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          SOLO RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">OSHI NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Album 02 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-02.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          COLLABORATION
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">
+                          ARTIST / GROUP
+                        </span>
+                      </div>
+                    </article>
+
+                    <!-- Album 03 Duplicate -->
+
+                    <article class="discography__item">
+                      <div class="discography__cover">
+                        <img
+                          src="./assets/img/member-02/albums/album-03.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+
+                      <div class="discography__info">
+                        <span class="discography__category">
+                          GROUP RELEASE
+                        </span>
+                        <h4 class="discography__album-title">ALBUM TITLE</h4>
+                        <span class="discography__artist">GROUP NAME</span>
+                      </div>
+                    </article>
+
+                    <!-- Archive Loop Separator Duplicate -->
+
+                    <div class="discography__separator" aria-hidden="true">
+                      <span class="discography__separator-label">
+                        MUSICAL ARCHIVE
+                      </span>
+
+                      <span class="discography__separator-title">
+                        THE MUSIC NEVER ENDS.
+                      </span>
+
+                      <span class="discography__separator-subtitle">
+                        ANOTHER MEMORY BEGINS.
+                      </span>
+
+                      <span class="discography__separator-line"></span>
+
+                      <span class="discography__separator-caption">
+                        RETURNING TO THE BEGINNING OF THE ARCHIVE
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="discography__footer">
+                <span class="discography__counter">
+                  <span data-discography-total>03</span>
+                  <span>RELEASES</span>
+                </span>
+
+                <span class="discography__footer-label"> MUSICAL ARCHIVE </span>
+              </div>
+            </section>
           </article>
 
-          <!-- Slide 04 -->
+          <!-- Slide 04: Favorites -->
+
           <article
             class="holomem__slide"
             data-title="FAVORITES"
             data-category="PERSONAL INTERESTS"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">THE LITTLE THINGS</p>
@@ -633,12 +1071,15 @@
             </div>
           </article>
 
-          <!-- Slide 05 -->
+          <!-- Slide 05: Personal Message -->
+
           <article
             class="holomem__slide"
             data-title="PERSONAL MESSAGE"
             data-category="A NOTE FROM THE ARCHIVE"
           >
+            <div class="holomem__slide-background" aria-hidden="true"></div>
+
             <div class="holomem__content">
               <div class="holomem__identity">
                 <p class="holomem__eyebrow">ONE LAST THING</p>
@@ -661,7 +1102,7 @@
 
               <div class="holomem__signature">
                 <span class="holomem__signature-line"></span>
-                <span class="holomem__signature-name">WITH ADMIRATION</span>
+                <span class="holomem__signature-name"> WITH ADMIRATION </span>
               </div>
             </div>
 
@@ -677,6 +1118,7 @@
         </div>
 
         <!-- Footer -->
+
         <footer class="holomem__footer">
           <div class="holomem__slide-info">
             <span class="holomem__slide-category">
@@ -702,9 +1144,9 @@
               </button>
 
               <div class="holomem__pagination-indicator">
-                <span class="holomem__pagination-current" aria-live="polite"
-                  >01</span
-                >
+                <span class="holomem__pagination-current" aria-live="polite">
+                  01
+                </span>
 
                 <span class="holomem__pagination-divider">/</span>
 
@@ -728,12 +1170,12 @@
           </div>
         </footer>
       </section>
-
-      <!-- ╔══════════════════════════════════════════════════════════════════════╗ -->
-      <!-- ╚══════════════════════════════════════════════════════════════════════╝ -->
     </main>
 
+    <!-- Scripts -->
+
     <script src="./js/holomem.js" defer></script>
+    <script src="./js/discography.js" defer></script>
     <script src="./js/main.js" defer></script>
   </body>
 </html>

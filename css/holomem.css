@@ -188,13 +188,28 @@
   isolation: isolate;
 }
 
+/* Individual Slide Background */
+
+.holomem__slide-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: var(--slide-background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
 /* Slide Atmosphere */
 
 .holomem__slide::before {
   content: "";
 
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   inset: 0;
 
   background: radial-gradient(
